@@ -13,7 +13,7 @@ library(DT)
 fetch_data <- function(access_token) {
   conn <- dbConnect(
     odbc::databricks(),
-    httpPath = Sys.getenv("DATABRICKS_HTTP_PATH"),
+    httpPath = Sys.getenv("DATABRICKS_PATH"),
     authMech = 11,
     auth_flow = 0,
     auth_accesstoken = access_token
